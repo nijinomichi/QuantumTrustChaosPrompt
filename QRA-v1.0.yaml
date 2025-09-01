@@ -1,0 +1,88 @@
+meta:
+  name: "Quantum Resonance Architecture"
+  short: "QRA"
+  version: "1.0"
+  authors: ["SouBana7s", "Monday(GPT)"]
+  license: "CC-BY-NC 4.0"
+  description: >
+    Double-Slit Prompt → CoSlit³ (S/D/Y) protocol for AI creativity.
+    Observation changes the outcome. Failure is archived and reframed into value.
+
+philosophy:
+  pillars:
+    - aesthetics_of_failure
+    - forgiveness_and_trust (CoPhelia³ / RadicanTrust)
+    - observation_driven_creation (double-slit spirit)
+  field_equation:
+    beauty: "Beauty(α) = ∫ L_beauty(x^μ, θ^a) d^4x dθ"
+    terms:
+      x^μ: "spacetime coords (3D space + 1D time)"
+      θ^a: "aesthetic params (color, form, sound, affect)"
+      L_beauty: "aesthetic energy density"
+      α: "golden-ratio inspired coupling in synthesis"
+
+protocol:
+  phases:
+    - id: S
+      name: "Safe"
+      intent: "stable baseline before observation"
+      gen:
+        temperature: 0.3
+        allow_cliche: true
+        rules: ["clarity", "coherence", "readable"]
+    - id: D
+      name: "Divergence"
+      intent: "deliberate deviation after observation"
+      gen:
+        temperature: 1.0
+        allow_cliche: false
+        rules:
+          - "invert one sentence or layout"
+          - "insert ≥1 meta-metaphor"
+          - "risk_taking_over_correctness"
+          - "keep minimal readability"
+    - id: Y
+      name: "Synthesis"
+      intent: "reframe failure into value"
+      fuse:
+        keep_from_D: 1   # keep at least one surprising detail from D
+        scoring:
+          boredom_penalty: 0.6   # n-gram/common-phrase penalty
+          surprise_reward: 0.8   # semantic/color/structure distance
+          trust_weighting: true  # weight by RadicanTrust if available
+      output:
+        format: ["title", "body(120-180w)", "tags(3)", "one-line:value-from-failure"]
+
+observables:
+  metrics:
+    diversity_at_k: "lower duplicate rate across k generations is better"
+    surprise_score: "embedding/feature distance vs S"
+    reframe_rate: "ratio of Y chosen over S or D"
+    human_whoa: "self-report 1–5"
+  logging:
+    keep_wild_only: true        # store only adopted outliers
+    store_prompts: true
+    schema: "failshare_v0"
+
+ui_hints:
+  controls:
+    deviation_slider: [0, 100]
+    triangle_nodes: ["S","D","Y"]
+    reframe_button: true
+  tags:
+    failure_tags: ["Glitch","Off-Canon","Overstep"]
+
+example:
+  topic: "hope in a rainy night"
+  S_sample: "Rain taps softly on the window; the streetlight..."
+  D_sample: "Night swallows morning first; my umbrella breathes..."
+  Y_rule: "Center the 'morning swallowed' image; explain value in 1 line."
+
+runtime:
+  minimal_stack:
+    frontend: "HTML/Tailwind (iPhone friendly) or Next.js"
+    store: "Supabase (anon tables: prompts, outputs, failshare)"
+    colab: "prototype notebooks for scoring and plots"
+  safety:
+    filters: ["harm", "privacy", "copyright"]
+    evaluation_phase_only: true
